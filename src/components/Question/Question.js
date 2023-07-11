@@ -33,7 +33,7 @@ export const Question=()=> {
     if(isInvalid)return;
     setIsShowLoader(true)
     console.log({data:dataObj})
-    axios.post('http://127.0.0.1:2020/que/save-que',{data:dataObj})
+    axios.post('https://nitnode.vercel.app/que/save-que',{data:dataObj})
     .then((res)=>{
       const {acknowledged,insertedId}=res.data
       setIsShowLoader(false)
